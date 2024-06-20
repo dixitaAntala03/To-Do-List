@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="todo_list.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To Do List</h1>
+        <form  onsubmit="addList(event);">
+            <label>Task : </label>
+            <input type="text" id="inputtask" size="70" required>
+            <br><br>
+            <label>Status : </label>
+            <select id="status">
+                <option>Not started</option>                
+                <option>In process</option>                
+                <option>Completed</option>                
+            </select>
+            <br><br>
+            <label>Due Date : </label>
+            <input type="date" id="duedate" size="70">
+            <br><br>
+            <input type="submit" id="submit_btn" value="SUBMIT">
+        </form>
+
+        <div class="record">
+            <table id="taskTable">
+                <thead>
+                    <tr>
+                        <th class="task">Task</th>
+                        <th>Status</th>
+                        <th>Due Date</th>
+                        <th>Day Left</th>
+                        <th style="width: 250px;">Action</th>
+                    </tr>
+                </thead>
+                
+                <tbody  id="parent">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="todo_list.js"></script>
+</body>
+</html>
